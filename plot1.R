@@ -18,9 +18,11 @@ power_consumption <- read_delim(
 )
 
 png("plot1.png")
-with(power_consumption,
-     hist(Global_active_power,
+with(
+  power_consumption,
+  hist(Global_active_power,
           col = "red",
           main = "Global Active Power",
-          xlab = "Global Active Power (kilowatts)"))
+          xlab = "Global Active Power (kilowatts)")
+)
 dev.off()
